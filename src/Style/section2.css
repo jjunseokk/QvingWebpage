@@ -4,11 +4,21 @@
 .section2-container {
     width: 100vw;
     height: 100vh;
-    margin-top: 180px;
     background: url(../Asset/background/section2-bg.png);
+
+    margin-top: 180px;
+}
+
+.form-area{
+    /* background-color: cadetblue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .section2-bubble {
+    margin-top: 100px;
     width: 510px;
     height: 150px;
     font-size: 40px;
@@ -18,4 +28,17 @@
     font-family: 'Black Han Sans', sans-serif;
     text-align: center;
     background: url(../Asset/Image/speechBubble.png) no-repeat;
+    margin-bottom: 50px;
+}
+
+.section2-search{
+    background-color: white;
+    width: 40vw;
+    height: 50px;
+    margin-bottom: 50px;
+}
+.kakao-map{
+    width: 50vw;
+    height: 500px;
+    background-color: wheat;
 }
