@@ -1,0 +1,34 @@
+{
+    "img" : [
+        {
+          "id": 1,
+          "src": "./src/Asset/Image/qving-img01.jpg",
+          "text": "첫번째 슬라이드 버튼",
+          "alt": "첫번째 슬라이드"
+        },
+        {
+          "id": 2,
+          "src": "./src/Asset/Image/qving-img02.jpg",
+          "text": "두번째 슬라이드 버튼",
+          "alt": "두번째 슬라이드"
+        },
+        {
+          "id": 3,
+          "src": "./src/Asset/Image/qving-img03.jpg",
+          "text": "세번째 슬라이드 버튼",
+          "alt": "세번째 슬라이드"
+        },
+        {
+          "id": 4,
+          "src": "./src/Asset/Image/qving-img04.jpg",
+          "text": "네번째 슬라이드 버튼",
+          "alt": "네번째 슬라이드"
+        },
+        {
+          "id": 5,
+          "src": "./src/Asset/Image/qving-img05.jpg",
+          "text": "다섯번째 슬라이드 버튼",
+          "alt": "다섯번째 슬라이드"
+        }
+      ]
+}
