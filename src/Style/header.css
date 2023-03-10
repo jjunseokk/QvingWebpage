@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+
+a{text-decoration: none;}
+li{list-style: none;}
+
+.Header-container {
+    width: 100vw;
+    height: 115px;
+    opacity: 0.451;
+    background-color: #000000;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.QvingLogo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.FollowBtn a {
+    text-decoration: none;
+    color: white;
+    padding: 2px 30px;
+    border-right: 1px solid white;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-family: "Angled Pen40";
+    text-align: center;
+}
+.FollowBtn a:hover{
+    color: green;
+}
+
+.FollowBtn a:last-child {
+    border: none;
+}

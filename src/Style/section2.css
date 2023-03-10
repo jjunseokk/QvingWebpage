@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+
+.section2-container {
+    width: 100vw;
+    height: 100vh;
+    margin-top: 180px;
+    background: url(../Asset/background/section2-bg.png);
+}
+
+.section2-bubble {
+    width: 510px;
+    height: 150px;
+    font-size: 40px;
+    padding: 30px 0px;
+    text-transform: uppercase;
+    color: #2b5a35;
+    font-family: 'Black Han Sans', sans-serif;
+    text-align: center;
+    background: url(../Asset/Image/speechBubble.png) no-repeat;
+}
