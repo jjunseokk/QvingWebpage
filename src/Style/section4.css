@@ -1,0 +1,36 @@
+.section4-container{
+    width: 100vw;
+    height: 100vh;
+    background:url(../Asset/background/section4.png) no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.qving-title{
+    display: block;
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    padding-top: 100px;
+}
+.qving-area{
+    z-index: 10;
+    position: absolute;
+    top :40%;
+    left: 55%;
+}
+
+.qving{
+    position: relative;
+    margin-top: 20px;
+}
+
+.qving-kiosk{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.qving-rayout{
+    position: absolute;
+    top: -100px;
+    left: 65px;
+    z-index: 10;
+}

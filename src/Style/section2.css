@@ -3,14 +3,13 @@
 
 .section2-container {
     width: 100vw;
-    height: 100vh;
+    padding-bottom: 50px;
     background: url(../Asset/background/section2-bg.png);
 
     margin-top: 180px;
 }
 
 .form-area{
-    /* background-color: cadetblue; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,11 +33,22 @@
 .section2-search{
     background-color: white;
     width: 40vw;
-    height: 50px;
+    height: 40px;
     margin-bottom: 50px;
 }
 .kakao-map{
     width: 50vw;
-    height: 500px;
+    height: 400px;
     background-color: wheat;
+}
+.section2-slide{
+    margin-top: 50px;
+}
+
+.section2-slide img{
+    width: 200px;
+    height: 300px;
+}
+.slider-style{
+    text-align: center;
 }

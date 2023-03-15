@@ -1,0 +1,33 @@
+$wh : #ffffff;
+$bk : #000000;
+$pt :#ffc0cb;
+
+.slick-arrow {
+        z-index: 10;
+        width: 50px;
+        height: 50px;
+        transition: background 0.5s;
+    
+        &::before {
+            font-family: 'Line Awesome Free';
+            font-weight: 900;
+            font-size: 49px;
+            transition: all 0.5s;
+        }
+    }
+    
+    .slick-prev {
+        left: 30px;
+
+        &::before {
+            content: url(../Asset/Image/prev.png);
+        }
+    }
+
+    .slick-next {
+        right: 30px;
+
+        &::before {
+            content: url(../Asset/Image/next.png);
+        }
+    }

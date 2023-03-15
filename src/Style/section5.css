@@ -1,0 +1,58 @@
+.section5-container{
+    width: 100vw;
+    height: 150vh;
+    background:url(../Asset/background/section5.png) no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.section5-container .wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.isnot-active{
+    position: absolute;
+    right: -70%;
+    opacity: 0;
+}
+.is-active{
+    position: absolute;
+    right: 35%;
+    opacity: 1;
+    transition: all 1s;
+}
+.wrap > img:nth-child(1){
+    margin-top: 100px;
+}
+.wrap > img:nth-child(2){
+    margin-top: 20px;
+    margin-bottom: 70px;
+}
+.memo{
+    width: 600px;
+    height: 600px;
+    background: url(../Asset/Image/memo.png) no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+
+
+@keyframes showMemo {
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}

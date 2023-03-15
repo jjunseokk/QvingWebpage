@@ -5,14 +5,16 @@ import styled from "styled-components";
 
 // Img
 import Qving from '../Asset/Image/qving.png';
-import QvingCircle1 from '../Asset/Image/QvingCricle1.png'
-import QvingCircle2 from '../Asset/Image/QvingCricle2.png'
-import QvingCircle3 from '../Asset/Image/QvingCricle3.png'
-import kakao from '../Asset/button/kakaoinquiry.png'
-import call from '../Asset/button/callinquiry.png'
+import QvingCircle1 from '../Asset/Image/QvingCricle1.png';
+import QvingCircle2 from '../Asset/Image/QvingCricle2.png';
+import QvingCircle3 from '../Asset/Image/QvingCricle3.png';
+import kakao from '../Asset/button/kakaoinquiry.png';
+import call from '../Asset/button/callinquiry.png';
+import Caption from '../Asset/Image/btnCaption.png';
+import Allow from "../Asset/Image/allow.png"
 
 const Section = () => {
-    
+
     // 퀵메뉴 따라오게
     window.addEventListener('scroll', function (e) {
         document.querySelector(".inquiry").style.top = window.scrollY + "px"
@@ -33,9 +35,14 @@ const Section = () => {
                 <div className="section1-detail">
                     <p>사은품 말고!</p>
                     <Button>우리 매장<br/> <span style={{color:"orange"}}>큐빙</span> 설치 신청하기</Button>
-                    <img className="detail-img1" src={QvingCircle1} alt=""/>
-                    <img className="detail-img2" src={QvingCircle2} alt=""/>
-                    <img className="detail-img3" src={QvingCircle3} alt=""/>
+                    <div>
+                        <img src={Caption} alt="caption"/>
+                        <img src={Allow} alt="allow" style={{marginLeft :"10px"}}/>
+                    </div>
+                    
+                    <img className="detail-img1 position" src={QvingCircle1} alt=""/>
+                    <img className="detail-img2 position" src={QvingCircle2} alt=""/>
+                    <img className="detail-img3 position" src={QvingCircle3} alt=""/>
                 </div>
 
                 <div className="inquiry">
@@ -56,6 +63,7 @@ const Button = styled.button`
     height: 105px;
     border: none;
     border-radius: 58px;
+    margin-bottom: 10px;
     background-color: #886831;
     color: white;
     font-size: 35px;
@@ -67,6 +75,7 @@ const Button = styled.button`
         transition: all 1s;
     }
     z-index: 10;
+    
 `;
 
 
