@@ -30,16 +30,21 @@
 }
 
 .submenu {
+    width: 205px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: 1s;
+    transition: all 1s;
+    background: url(../Asset/Image/tapMenu_off.png) no-repeat;
 }
 
 .focused {
     transform: rotate(10deg);
-    transition: 1s;
+    transition: all 1s;
+    background: url(../Asset/Image/tapMenu_on.png) no-repeat;
+
 }
 
 .section3-container .position {

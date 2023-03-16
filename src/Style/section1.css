@@ -9,7 +9,8 @@
 .section1-container {
     width: 100vw;
     height: 100vh;
-    background: url(../Asset/background/section1-bg.png);
+    background: url(../Asset/background/section1-bg.png) no-repeat;
+    background-size: cover;
 
     display: flex;
     justify-content: center;

@@ -12,23 +12,20 @@ import qvingball_4 from '../Asset/Image/golfball4.png';
 import qvingball_5 from '../Asset/Image/golfball5.png';
 import glove from '../Asset/Image/glove.png';
 import Title from '../Asset/Image/section3-title.png';
-import golfBall from '../Asset/Image/golfball.png';
-import golfGlove from '../Asset/Image/golfglove.png';
-import golfItem from '../Asset/Image/golfitem.png';
-import golfOther from '../Asset/Image/other.png';
-import golfBall_on from '../Asset/Image/golfball_on.png';
-import golfGlove_on from '../Asset/Image/golfglove_on.png';
-import golfItem_on from '../Asset/Image/golfitem_on.png';
-import golfOther_on from '../Asset/Image/other_on.png';
+import golfBallText from '../Asset/Image/golfBallText.png';
+import golfItmeText from '../Asset/Image/golfItemText.png';
+import golfGloveText from '../Asset/Image/golfGloveText.png';
+import OtherText from '../Asset/Image/OtherText.png';
+
 
 const Section3 = () => {
-    const [currentTab, clickTab] = useState(0);
+    let [currentTab, clickTab] = useState(0);
 
     const menuArr = [
-        { name: '골프공', content: <GolfBall/>, img: golfBall, isActive: golfBall_on},
-        { name: '일반용품', content: <GolfGlove/>, img: golfGlove, isActive: golfGlove_on },
-        { name: '뷰티', content: <GolfItem/>, img: golfItem, isActive: golfItem_on },
-        { name: '생활', content: <Other/>, img: golfOther, isActive: golfOther_on },
+        { name: '골프공', content: <GolfBall />, img: golfBallText },
+        { name: '일반용품', content: <GolfGlove />, img: golfGloveText },
+        { name: '뷰티', content: <GolfItem />, img: golfItmeText },
+        { name: '생활', content: <Other />, img: OtherText },
     ];
     const selectMenuHandler = (index) => {
         // parameter로 현재 선택한 인덱스 값을 전달해야 하며, 이벤트 객체(event)는 쓰지 않는다
@@ -40,8 +37,8 @@ const Section3 = () => {
             <img src={Title} alt="title" />
             <ul>
                 {menuArr.map((el, index) => (
-                    <li className={index === currentTab ? "submenu focused" : "submenu"}
-                        onClick={() => selectMenuHandler(index)}><img src={currentTab? el.img : el.isActive} alt="" /></li>
+                    <li key={index} className={index === currentTab ? "submenu focused" : "submenu"}
+                        onClick={() => selectMenuHandler(index)}><img src={el.img} alt="" /></li>
                 ))}
             </ul>
             <div className="itemBox">

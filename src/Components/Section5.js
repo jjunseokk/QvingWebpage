@@ -11,17 +11,16 @@ const Section5 = () => {
 
     useEffect(() => {
         handlescroll();
-        console.log(document.querySelector(".section5-container").offsetTop);
     })
 
     const handlescroll = () => {
         let container = document.querySelector(".section5-container");
         if (container.offsetTop <= position) {
             setChange(true);
-            console.log("true:::::", change);
+         
         } else {
             setChange(false);
-            // console.log("false::::", change);
+
         }
     }
 

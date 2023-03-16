@@ -13,7 +13,7 @@ const Container = styled.div`
 const Card = (props) => {
     return (
         <Container>
-                <img src={props.img} alt="" />
+            <img src={props.img} alt="" />
         </Container>
     )
 }

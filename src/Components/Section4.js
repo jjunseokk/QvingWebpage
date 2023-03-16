@@ -15,11 +15,12 @@ import qvingrayout_4 from '../Asset/Image/qvingrayout_4.png';
 import qvingtutorial from '../Asset/Image/qvingtutorial.png'
 
 const Section4 = () => {
+
     const settings = {
         dots: false,
         infinite: true,
         autoplay: true,
-        arrows: true,
+        arrows: false,
     }
 
     return (
@@ -28,9 +29,13 @@ const Section4 = () => {
             <div className="qving-area">
                 <div className="qving">
                     <img className="qving-kiosk" src={qvingkiosk} alt="" />
-                    <img className="qving-rayout" src={qvingrayout_2} alt="" />
+                    <Slider className="qving-slider" {...settings}>
+                        <img src={qvingrayout_1} alt=""/>
+                        <img src={qvingrayout_2} alt=""/>
+                        <img src={qvingrayout_3} alt=""/>
+                        <img src={qvingrayout_4} alt=""/>
+                    </Slider>
                 </div>
-
             </div>
         </div>
     )
