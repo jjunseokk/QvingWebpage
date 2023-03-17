@@ -22,13 +22,13 @@ function App() {
       <div id='3'>
         <Section4 />
       </div>
-      {/*<div id='4'>
+      <div id='4'>
         <Section5 />
       </div>
       <Section6 />
       <div id='5'>
         <Section7 />
-      </div> */}
+      </div>
     </div>
   );
 }
