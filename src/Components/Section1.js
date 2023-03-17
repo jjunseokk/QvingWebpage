@@ -55,7 +55,7 @@ const Section = () => {
             </div>
             <div className="inquiry">
                     <a href="https://pf.kakao.com/_xnGFTT"><img src={kakao} alt="kakao" /></a>
-                    <a href="tel:01023138636"><img src={call} alt="" /></a>
+                    <a href="tel:0220705009"><img src={call} alt="" /></a>
             </div>
 
         </>
@@ -88,6 +88,7 @@ const Button = styled.button`
         height: 80px;
         font-size: 25px;
         z-index: 10;
+        cursor: pointer;
     }
     
 `;

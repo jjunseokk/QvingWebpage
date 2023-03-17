@@ -12,6 +12,9 @@ import playScore from '../Asset/Image/play.png';
 import inquiry from '../Asset/Image/Inquiry.png';
 import event from '../Asset/Image/event.png';
 import submitBtn from '../Asset/Image/submitBtn.png'
+import acodion from '../Asset/Image/acodion.png';
+import qvingball from '../Asset/Image/golfball1.png';
+
 
 const Section7 = () => {
     const { register, handleSubmit, formState: { errors }, } = useForm();
@@ -31,6 +34,9 @@ const Section7 = () => {
             <div className="install-header">
                 <img src={installTitle} alt="" />
                 <img src={installText} alt="" />
+            </div>
+            <div className="event-style">
+                <img src={event} alt="" />
             </div>
             <div className="install-area">
                 <form onSubmit={handleSubmit(onSubmit, onError)}>
@@ -95,13 +101,18 @@ const Section7 = () => {
                             placeholder="문의사항을 입력하세요." />
                         {errors.inquiry?.type === "required" && <p className="inputText">문의사항을 입력해주세요.</p>}
                     </div>
-
-                    <div className="event-style">
-                        <img src={event} alt="" />
-                    </div>
-
                     <button className="btnStyle" type="submit"><img src={submitBtn} alt="" /></button>
                 </form>
+            </div>
+            <button className="acodionBtn"><img src={acodion} alt=""/></button>
+            <div className="eventArea">
+                <div className="eventImg">
+                    <img src={qvingball} alt=""/>
+                </div>
+                <div className="eventText">
+                    <h2>제목구간</h2>
+                    <p>설명 간단히설명 간단히설명 간단히설명 간단히설명 간단히설명 간단히설명 간단히설명 간단히설명 간단히설명 간단히</p>
+                </div>
             </div>
         </div>
     )

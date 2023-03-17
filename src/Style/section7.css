@@ -1,90 +1,148 @@
-.section7-container{
+.section7-container {
     width: 100vw;
-    height: 200vh;
+    height: auto;
     background: url(../Asset/background/section7.png);
 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    padding-top: 100px;
 }
-.install-header{
+
+.install-header {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 
-    margin-bottom: 150px;
+    margin-bottom: 50px;
 }
-.install-header img:first-child{
+
+.install-header img:first-child {
     margin-bottom: 20px;
 }
-.install-area{
+
+.install-area {
     width: 100vw;
     /* border: 1px solid red; */
-    height: 870px;
+    height: 720px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.install-area form{
+.install-area form {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.install-area label{
+
+.install-area label {
     width: 100px;
     margin-right: 20px;
     color: white;
 }
-.install-area input{
+
+.install-area input {
     width: 440px;
     height: 40px;
     padding-left: 10px;
     margin-bottom: 15px;
     border-radius: 15px;
 }
-.inputText{
+
+.inputText {
     color: red;
     font-weight: bold;
     margin-left: 200px;
     margin-bottom: 10px;
 }
 
-.install-area button{
+.install-area button {
     border: none;
     background-color: transparent;
     margin-top: 20px;
 }
-.input-style{
+
+.input-style {
     padding-bottom: 210px;
 }
-.install-area textarea{
+
+.install-area textarea {
     border-radius: 15px;
     padding: 5px 0px 0px 5px;
 }
-.event-style{
+
+.event-style {
     margin-left: 150px;
-    margin: 40px 0px;
+    margin: 5px 0px;
 }
-.btnStyle{
+
+.btnStyle {
     cursor: pointer;
 }
 
+.acodionBtn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.eventArea {
+    width: 500px;
+    height: 200px;
+    background-color: white;
+    margin: 20px 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+}
+
+.eventImg {
+    width: 30%;
+    margin-right: 10%;
+}
+
+.eventImg img {
+    width: 100%;
+}
+
+.eventText {
+    width: 60%;
+    height: 100%;
+}
+
+.eventText h2 {
+    color:#886831 ;
+    text-align: center;
+    border-bottom: 1px solid #886831;
+}
+.eventText p {
+    color:  red;
+    height: 50%;
+    margin-top: 10px;
+}
+
 @media screen and (max-width: 767px) {
-    .install-area input{
+    .install-area input {
         width: 200px;
         height: 40px;
         padding-left: 10px;
         margin-bottom: 15px;
         border-radius: 15px;
     }
-    .install-area textarea{
+
+    .install-area textarea {
         width: 200px;
     }
-    .event-style img{
+
+    .event-style img {
         width: 80vw;
     }
 }
