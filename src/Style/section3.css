@@ -81,7 +81,7 @@
 }
 
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 767px) {
     .section3-container {
         height: 350px;
     }

@@ -26,7 +26,7 @@ const Section6 = () => {
                 <Block img={blockImg_3} title={blockTitle_3} />
                 <Block img={blockImg_4} title={blockTitle_4} />
             </div>
-            <img style={{marginBottom:'40px'}} src={qvingOperationText} alt=""/>
+            <img style={{width:"100%",marginBottom:'40px'}} src={qvingOperationText} alt=""/>
             <a href="https://xperon.onelink.me/NaR5"><img src={downBtn} alt=""/></a>
         </div>
     )

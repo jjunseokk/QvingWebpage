@@ -72,3 +72,19 @@
 .btnStyle{
     cursor: pointer;
 }
+
+@media screen and (max-width: 767px) {
+    .install-area input{
+        width: 200px;
+        height: 40px;
+        padding-left: 10px;
+        margin-bottom: 15px;
+        border-radius: 15px;
+    }
+    .install-area textarea{
+        width: 200px;
+    }
+    .event-style img{
+        width: 80vw;
+    }
+}

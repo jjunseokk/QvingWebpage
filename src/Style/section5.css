@@ -45,13 +45,28 @@
 }
 
 
-
-@keyframes showMemo {
-    from{
-        opacity: 0;
+@media screen and (max-width: 767px) {
+    .section5-container{
+        width: 100vw;
+        height: 70vh;
     }
-
-    to{
+    .isnot-active{
+        position:initial;
         opacity: 1;
+    }
+    .is-active{
+        position:initial;
+
+    }
+    .memo{
+        width: 400px;
+        height: 400px;
+        background: url(../Asset/Image/memo.png) no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+    }
+    .memo img{
+        width: 100%;
     }
 }

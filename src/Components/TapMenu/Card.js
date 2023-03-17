@@ -9,7 +9,7 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
 
-    @media screen and (max-width: 425px) { 
+    @media screen and (max-width: 767px) { 
         width: 290px;
         height: 110px;
     }

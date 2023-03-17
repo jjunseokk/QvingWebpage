@@ -42,7 +42,7 @@ li{list-style: none;}
     border: none;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 767px) {
     .Header-container {
         width: 100vw;
         height: 115px;

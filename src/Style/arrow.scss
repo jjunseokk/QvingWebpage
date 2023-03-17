@@ -31,7 +31,7 @@ $pt :#ffc0cb;
             content: url(../Asset/Image/next.png);
         }
     }
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 767px) {
         .slick-arrow {
             z-index: 10;
             width: 30px;

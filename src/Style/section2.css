@@ -56,7 +56,7 @@
 .slider-style img{
     margin: 0 auto;
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 767px) {
     .section2-bubble {
         width: 260px;
         height: 80px;
