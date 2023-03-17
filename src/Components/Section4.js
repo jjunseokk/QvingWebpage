@@ -27,7 +27,7 @@ const Section4 = () => {
         <div className="section4-container">
             <img className="qving-title" src={qvingtutorial} alt="" />
             <div className="qving-area">
-                {/* <div className="qving">
+                <div className="qving">
                     <img className="qving-kiosk" src={qvingkiosk} alt="" />
                     <Slider className="qving-slider" {...settings}>
                         <img src={qvingrayout_1} alt=""/>
@@ -35,7 +35,7 @@ const Section4 = () => {
                         <img src={qvingrayout_3} alt=""/>
                         <img src={qvingrayout_4} alt=""/>
                     </Slider>
-                </div> */}
+                </div>
             </div>
         </div>
     )
