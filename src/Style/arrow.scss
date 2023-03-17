@@ -31,3 +31,34 @@ $pt :#ffc0cb;
             content: url(../Asset/Image/next.png);
         }
     }
+    @media screen and (max-width: 425px) {
+        .slick-arrow {
+            z-index: 10;
+            width: 30px;
+            height: 20px;
+            transition: background 0.5s;
+        
+            &::before {
+                font-family: 'Line Awesome Free';
+                font-weight: 900;
+                font-size: 20px;
+                transition: all 0.5s;
+            }
+        }
+        
+        .slick-prev {
+            left: 5px;
+    
+            &::before {
+                content: url(../Asset/Image/prev.png);
+            }
+        }
+    
+        .slick-next {
+            right: 5px;
+    
+            &::before {
+                content: url(../Asset/Image/next.png);
+            }
+        }
+    }

@@ -8,8 +8,8 @@ import '../../Style/arrow.scss';
 
 
 import Item_1 from '../../Asset/Image/card/item_1.png';
-import Item_2 from '../../Asset/Image/card/item_3.png';
-import Item_3 from '../../Asset/Image/card/item_4.png';
+import Item_2 from '../../Asset/Image/card/item_2.png';
+import Item_3 from '../../Asset/Image/card/item_3.png';
 import Item_4 from '../../Asset/Image/card/item_4.png';
 
 

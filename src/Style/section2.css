@@ -7,6 +7,7 @@
     background: url(../Asset/background/section2-bg.png);
 
     margin-top: 180px;
+    z-index: -10;
 }
 
 .form-area{
@@ -51,4 +52,31 @@
 }
 .slider-style{
     text-align: center;
+}
+.slider-style img{
+    margin: 0 auto;
+}
+@media screen and (max-width: 425px) {
+    .section2-bubble {
+        width: 260px;
+        height: 80px;
+        padding: 3px 0px;
+        font-size: 20px;
+        background-size: cover;
+        margin-bottom: 50px;
+    }
+    .section2-search{
+        background-color: white;
+        width: 95vw;
+        height: 40px;
+        margin-bottom: 50px;
+    }
+    .kakao-map{
+        width: 95vw;
+        height: 400px;
+        background-color: wheat;
+    }
+    .slider-style img{
+        margin: 0 auto;
+    }
 }

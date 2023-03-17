@@ -1,6 +1,8 @@
 import React from "react";
 import '../Style/section1.css';
 import styled from "styled-components";
+import { Link } from "react-scroll";
+import Header from "./Header";
 
 
 // Img
@@ -11,7 +13,7 @@ import QvingCircle3 from '../Asset/Image/QvingCricle3.png';
 import kakao from '../Asset/button/kakaoinquiry.png';
 import call from '../Asset/button/callinquiry.png';
 import Caption from '../Asset/Image/btnCaption.png';
-import Allow from "../Asset/Image/allow.png"
+import Allow from "../Asset/Image/allow.png";
 
 const Section = () => {
 
@@ -22,6 +24,7 @@ const Section = () => {
 
     return (
         <>
+            <Header />
             <div className="section1-container">
                 <div className="section1-title-img">
                     <div className="section1-title">
@@ -34,21 +37,22 @@ const Section = () => {
                 </div>
                 <div className="section1-detail">
                     <p>사은품 말고!</p>
-                    <Button>우리 매장<br/> <span style={{color:"orange"}}>큐빙</span> 설치 신청하기</Button>
+                    <Link to="5" spy={true} smooth={true}>
+                        <Button>우리 매장<br /> <span style={{ color: "orange" }}>큐빙</span> 설치 신청하기</Button>
+                    </Link>
                     <div>
-                        <img src={Caption} alt="caption"/>
-                        <img src={Allow} alt="allow" style={{marginLeft :"10px"}}/>
+                        <img src={Caption} alt="caption" />
+                        <img src={Allow} alt="allow" style={{ marginLeft: "10px", width: "20px" }} />
                     </div>
-                    
-                    <img className="detail-img1 position" src={QvingCircle1} alt=""/>
-                    <img className="detail-img2 position" src={QvingCircle2} alt=""/>
-                    <img className="detail-img3 position" src={QvingCircle3} alt=""/>
-                </div>
 
-                <div className="inquiry">
-                    <a href="https://pf.kakao.com/_xnGFTT"><img src={kakao} alt="kakao"/></a>
-                    <a href="tel:01023138636"><img src={call} alt=""/></a>
+                    <img className="detail-img1 position" src={QvingCircle1} alt="" />
+                    <img className="detail-img2 position" src={QvingCircle2} alt="" />
+                    <img className="detail-img3 position" src={QvingCircle3} alt="" />
                 </div>
+            </div>
+            <div className="inquiry">
+                <a href="https://pf.kakao.com/_xnGFTT"><img src={kakao} alt="kakao" /></a>
+                <a href="tel:01023138636"><img src={call} alt="" /></a>
             </div>
 
         </>
@@ -75,6 +79,13 @@ const Button = styled.button`
         transition: all 1s;
     }
     z-index: 10;
+
+    @media screen and (max-width: 425px) {
+        width: 250px;
+        height: 80px;
+        font-size: 25px;
+        z-index: 10;
+    }
     
 `;
 

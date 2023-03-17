@@ -1,6 +1,6 @@
 import React from "react";
 import '../Style/header.css'
-import { Link } from "react-scroll"
+import { Link } from "react-scroll";
 
 
 // Img

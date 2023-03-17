@@ -7,7 +7,6 @@
 }
 .qving-title{
     display: block;
-    /* border: 1px solid red; */
     margin: 0 auto;
     padding-top: 100px;
 }
@@ -41,5 +40,44 @@
 .qving-slider img{
     width: 100%;
     height: 700px;
+}
 
+
+@media screen and (max-width: 425px) {
+    .section4-container{
+        width: 100vw;
+        height: 90vh;
+        background:url(../Asset/background/section4.png) no-repeat 40% center;
+        background-size: 400%;
+
+    }
+    .qving-title{
+       width: 100vw;
+    }
+    .qving-area{
+        z-index: 10;
+        position: absolute;
+        top :40%;
+        left: 55%;
+    }
+    .qving{
+        width: 200px;
+        height: 330px;
+        border: 1px solid red;
+    }
+    .qving img{
+        width: 100%;
+    }
+    .qving-slider{
+        width: 80%;
+        height: 320px;
+        top: -40px;
+        left: 20px;
+        border: 1px solid red;
+    }
+    .qving-slider img{
+        width: 100%;
+        height: 300px;
+    }
+    
 }

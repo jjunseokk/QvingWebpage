@@ -5,7 +5,6 @@
 :root{
     --white : white
 }
-
 .section1-container {
     width: 100vw;
     height: 100vh;
@@ -18,24 +17,19 @@
     flex-direction: column;
 
     position: relative;
+    padding-top: 100px;
+    z-index: -1;
+
 }
 
 .section1-title-img{
     text-align: center;
-    margin: 50px;
     z-index: 1;
     /* background-color: red; */
 }
 
 .section1-title {
-    margin-bottom: 60px;
-}
-
-.section1-img{
-
-}
-.section1-img img{
-
+    margin-bottom: 40px;
 }
 
 .section1-title .one {
@@ -62,12 +56,13 @@
     background-color: #e2b76d;
 
     position: absolute;
-    bottom: -180px;
+    bottom: -240px;
     
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    z-index: -10;
 }
 
 .section1-detail p{
@@ -100,4 +95,76 @@
     display: flex;
     flex-direction: column;
     z-index: 10;
+}
+
+@media screen and (max-width: 425px) {
+    .section1-title-img{
+        width: 100wv;
+    }
+    .section1-title {
+        width: 100vw;
+        margin-bottom: 60px;
+    }
+    
+    .section1-title .one {
+        width: 100vw;
+        font-size: 20px;
+        text-transform: uppercase;
+        color: #beeeb6;
+        font-family: 'Jua', sans-serif;
+        text-align: center;
+    }
+    
+    .section1-title .two {
+        width: 100vw;
+        font-size: 35px;
+        text-transform: uppercase;
+        color: var(--white);
+        font-family: 'Jua', sans-serif;
+        text-align: center;
+        font-weight: bold;
+    }
+    .section1-img{
+        width: 100vw;
+        /* border: 1px solid red; */
+    }
+    .section1-img img{
+        width: 200px;
+    }
+    .section1-detail{
+        width: 100vw;
+    }
+    .section1-detail div img{
+        width: 100px;
+    }
+
+    .position{
+        position: absolute;
+        z-index: -1;
+        width: 100px;
+    }
+    .detail-img1{
+        top: 15%;
+        left: 5%;
+    }
+    .detail-img2{
+        top : 20%;
+        right: 5%;
+    }
+    .detail-img3{
+        top : 60%;
+        right: 10%;
+    }
+    .inquiry{
+        position: fixed;
+
+        top: 100px;
+    
+        display: flex;
+        flex-direction: column;
+        z-index: 999;
+    }
+    .inquiry a img{
+        width: 50px;
+    }
 }

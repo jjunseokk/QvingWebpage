@@ -12,9 +12,8 @@ import Section7 from './Components/Section7';
 function App() {
   return (
     <div className="App">
-      <Header />
       <Section1 />
-      <div id='1'>
+       <div id='1'>
         <Section2 />
       </div>
       <div id='2'>
@@ -23,13 +22,13 @@ function App() {
       <div id='3'>
         <Section4 />
       </div>
-      <div id='4'>
+      {/*<div id='4'>
         <Section5 />
       </div>
       <Section6 />
       <div id='5'>
         <Section7 />
-      </div>
+      </div> */}
     </div>
   );
 }

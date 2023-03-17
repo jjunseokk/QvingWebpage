@@ -9,7 +9,6 @@ import speechText from '../Asset/Image/speechText.png';
 
 
 const Section2 = () => {
-
     const settings = {
         dots: false,
         infinite: true,

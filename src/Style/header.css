@@ -13,6 +13,9 @@ li{list-style: none;}
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: absolute;
+    top: 0px;
+    z-index: 1;
 }
 
 .QvingLogo {
@@ -37,4 +40,37 @@ li{list-style: none;}
 
 .FollowBtn a:last-child {
     border: none;
+}
+
+@media screen and (max-width: 425px) {
+    .Header-container {
+        width: 100vw;
+        height: 115px;
+        opacity: 0.451;
+        background-color: #000000;
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: absolute;
+        flex-direction: column;
+        top: 0px;
+        z-index: 10;
+    }
+
+    .QvingLogo {
+        position : relative;
+    }
+
+    .FollowBtn a {
+        text-decoration: none;
+        color: white;
+        padding: 0px 2px;
+        border-right: 1px solid white;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #ffffff;
+        font-family: "Angled Pen40";
+        text-align: center;
+    }
 }
