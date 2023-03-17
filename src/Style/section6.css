@@ -50,9 +50,8 @@
 
     .section6-container{
         width: 100vw;
-        height: 200vh;
-        
-        border: 1px solid red;
+        height: auto;
+        margin-top: 20px;
     }
 
     .block-area{

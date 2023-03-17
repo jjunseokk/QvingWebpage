@@ -46,7 +46,7 @@
 @media screen and (max-width: 767px) {
     .section4-container{
         width: 100vw;
-        height: 50vh;
+        height: 100vh;
         background:url(../Asset/background/section4.png) no-repeat 45% center;
         background-size: 400%;
     }

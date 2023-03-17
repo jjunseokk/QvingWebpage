@@ -48,7 +48,8 @@
 @media screen and (max-width: 767px) {
     .section5-container{
         width: 100vw;
-        height: 70vh;
+        height: auto;
+        padding: 20px 0px;
     }
     .isnot-active{
         position:initial;
