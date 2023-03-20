@@ -24,9 +24,10 @@
 }
 .is-active{
     position: absolute;
-    left: 34%;
+    left: 50%;
     opacity: 1;
     transition: all 1s;
+    transform: translate(-50%);
 }
 .wrap > img:nth-child(1){
     margin-top: 100px;
@@ -52,11 +53,13 @@
         padding: 20px 0px;
     }
     .isnot-active{
-        position:initial;
+        position:inaitial;
         opacity: 1;
+
     }
     .is-active{
         position:initial;
+        transform: translate(0%);
 
     }
     .memo{

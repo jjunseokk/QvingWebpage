@@ -21,7 +21,7 @@
 
     position: relative;
     padding-top: 100px;
-    z-index: 1;
+    z-index: -1;
 
 }
 
@@ -159,15 +159,7 @@
         right: 10%;
     }
     .inquiry{
-        position: absolute;
-
-        top: 100px;
+        display: none;
+    }
     
-        display: flex;
-        flex-direction: column;
-        z-index: 999;
-    }
-    .inquiry a img{
-        width: 50px;
-    }
 }

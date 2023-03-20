@@ -23,7 +23,7 @@ li{list-style: none;}
     top: 10px;
     left: 10px;
 }
-.FollowBtn a {
+.FollowBtn span {
     text-decoration: none;
     color: white;
     padding: 2px 30px;
@@ -33,12 +33,13 @@ li{list-style: none;}
     color: #ffffff;
     font-family: "Angled Pen40";
     text-align: center;
+    cursor: pointer;
 }
-.FollowBtn a:hover{
+.FollowBtn span:hover{
     color: green;
 }
 
-.FollowBtn a:last-child {
+.FollowBtn span:last-child {
     border: none;
 }
 
@@ -62,7 +63,7 @@ li{list-style: none;}
         position : relative;
     }
 
-    .FollowBtn a {
+    .FollowBtn span {
         text-decoration: none;
         color: white;
         padding: 0px 2px;

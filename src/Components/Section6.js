@@ -1,6 +1,7 @@
 import React from "react";
 import '../Style/section6.css'
 import Block from "./OperationBlock/Block";
+import { Link } from "react-scroll";
 
 import blockImg_1 from '../Asset/Image/qvingBlockImage_1.png';
 import blockImg_2 from '../Asset/Image/qvingBlockImage_2.png';
@@ -27,7 +28,7 @@ const Section6 = () => {
                 <Block img={blockImg_4} title={blockTitle_4} />
             </div>
             <img style={{marginBottom:'40px'}} src={qvingOperationText} alt=""/>
-            <a href="https://xperon.onelink.me/NaR5"><img src={downBtn} alt=""/></a>
+            <Link to="https://xperon.onelink.me/NaR5"><img src={downBtn} alt=""/></Link>
         </div>
     )
 }

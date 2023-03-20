@@ -12,19 +12,19 @@ function Header() {
             <img className="QvingLogo" src={QvingLogo} alt="" />
             <div className="FollowBtn">
                 <Link to="1" spy={true} smooth={true}>
-                    <a href="#!">매장 찾기</a>
+                    <span>매장 찾기</span>
                 </Link>
                 <Link to="2" spy={true} smooth={true}>
-                    <a href="#!">입접 제품 소개</a>
+                    <span>입접 제품 소개</span>
                 </Link>
                 <Link to="3" spy={true} smooth={true}>
-                    <a href="#!">사용법</a>
+                    <span>사용법</span>
                 </Link>
                 <Link to="4" spy={true} smooth={true}>
-                    <a href="#!">설치 비용</a>
+                    <span>설치 비용</span>
                 </Link>
                 <Link to="5" spy={true} smooth={true}>
-                    <a href="#!">문의 하기</a>
+                    <span>문의 하기</span>
                 </Link>
             </div>
         </div>

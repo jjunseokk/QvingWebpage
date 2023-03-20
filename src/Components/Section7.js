@@ -16,6 +16,7 @@ import acodion from '../Asset/Image/acodion.png';
 import qvingball from '../Asset/Image/golfball1.png';
 
 
+
 const Section7 = () => {
     const { register, handleSubmit, formState: { errors }, } = useForm();
 
@@ -28,6 +29,15 @@ const Section7 = () => {
         console.log("에러가 뜨는가?:::::", error);
     };
 
+    const [showEvent, setShowEvent] = useState(false);
+
+    const toggleBtn =() =>{
+        setShowEvent(!showEvent);
+        console.log(showEvent)
+    }
+
+
+    
 
     return (
         <div className="section7-container">
@@ -104,8 +114,8 @@ const Section7 = () => {
                     <button className="btnStyle" type="submit"><img src={submitBtn} alt="" /></button>
                 </form>
             </div>
-            <button className="acodionBtn"><img src={acodion} alt=""/></button>
-            <div className="eventArea">
+            <button className="acodionBtn" onClick={toggleBtn}><img src={acodion} alt=""/></button>
+            <div className={showEvent? "eventArea event-active":"eventArea event-not-active"}>
                 <div className="eventImg">
                     <img src={qvingball} alt=""/>
                 </div>

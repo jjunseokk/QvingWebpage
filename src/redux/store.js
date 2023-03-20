@@ -1,9 +1,8 @@
-import { configureStore } from "@reduxjs/toolkit";
+import {createStore, applyMiddleware} from "redux";
+import thunk from 'redux-thunk' //추가
+import rootReducer from "./reducer";
 
-const store = configureStore({
-    reducer:{
-        
-    }
-})
+let store = createStore(rootReducer, applyMiddleware(thunk));
+
 
 export default store;

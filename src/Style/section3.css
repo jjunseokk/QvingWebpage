@@ -48,6 +48,7 @@
 
 .section3-container .position {
     position: absolute;
+    z-index: -1;
 }
 
 .ball_1 {

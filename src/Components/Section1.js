@@ -17,6 +17,7 @@ import Allow from "../Asset/Image/allow.png";
 
 const Section = () => {
 
+
     // 퀵메뉴 따라오게
 
         window.addEventListener('scroll', function (e) {
@@ -54,8 +55,8 @@ const Section = () => {
                 </div>
             </div>
             <div className="inquiry">
-                    <a href="https://pf.kakao.com/_xnGFTT"><img src={kakao} alt="kakao" /></a>
-                    <a href="tel:0220705009"><img src={call} alt="" /></a>
+                    <Link to="https://pf.kakao.com/_xnGFTT"><img src={kakao} alt="kakao" /></Link>
+                    <Link to="tel:0220705009"><img src={call} alt="" /></Link>
             </div>
 
         </>
