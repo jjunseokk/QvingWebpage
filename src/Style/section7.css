@@ -26,11 +26,11 @@
 
 .install-area {
     width: 100vw;
-    /* border: 1px solid red; */
-    height: 720px;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 50px 0px;
 }
 
 .install-area form {
@@ -93,18 +93,23 @@
 
 .eventArea {
     width: 500px;
-    height: 200px;
-    background-color: white;
+    height: auto;
+    background-color: transparent;
     margin: 20px 0px;
 
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
     padding: 10px;
-
+    border: 1px solid red;
 }
-
+.eventCard{
+    width: 100%;
+    background-color: white;
+    display: flex;
+}
 .event-active{
     display: inherit;
     transition: all 2s;
@@ -117,6 +122,7 @@
 .eventImg {
     width: 30%;
     margin-right: 10%;
+    margin: 0 auto;
 }
 
 .eventImg img {
@@ -140,8 +146,18 @@
 }
 
 @media screen and (max-width: 767px) {
+    .install-header img:first-child {
+        margin-bottom: 20px;
+    }
+    .install-header img:last-child {
+        width: 250px;
+    }
+    .install-area {
+       margin: 100px 0px;
+    }
+
     .install-area input {
-        width: 200px;
+        width: 50vw;
         height: 40px;
         padding-left: 10px;
         margin-bottom: 15px;
@@ -149,7 +165,7 @@
     }
 
     .install-area textarea {
-        width: 200px;
+        width: 50vw;
     }
 
     .event-style img {
@@ -157,5 +173,33 @@
     }
     .eventArea {
         width: 80vw;
+    }
+    .inputText {
+        color: red;
+        font-weight: bold;
+        margin-left: 200px;
+        margin-bottom: 10px;
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width : 375px) {
+    .install-area label img {
+        width: 100px;
+    }
+    .install-area input {
+        font-size: 10px;
+    }
+
+    .install-area textarea {
+        font-size: 10px;
+        height: 225px;
+    }
+    .inputText {
+        color: red;
+        font-weight: bold;
+        margin-left: 120px;
+        margin-bottom: 10px;
+        font-size: 11px;
     }
 }

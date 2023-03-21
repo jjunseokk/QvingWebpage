@@ -22,6 +22,7 @@ const Section = () => {
 
         window.addEventListener('scroll', function (e) {
             document.querySelector(".inquiry").style.top = window.scrollY + "px";
+            document.querySelector(".inquiry").style.marginTop = "50px";
         })
 
    

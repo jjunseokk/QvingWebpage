@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import '../Style/section7.css';
+import { token } from '../redux/api'
+import axios from "axios";
 
 import installText from '../Asset/Image/installText.png';
 import installTitle from '../Asset/Image/installTitle.png';
@@ -13,7 +15,8 @@ import inquiry from '../Asset/Image/Inquiry.png';
 import event from '../Asset/Image/event.png';
 import submitBtn from '../Asset/Image/submitBtn.png'
 import acodion from '../Asset/Image/acodion.png';
-import qvingball from '../Asset/Image/golfball1.png';
+import BlogCard from "./BlogCard";
+
 
 
 
@@ -31,13 +34,53 @@ const Section7 = () => {
 
     const [showEvent, setShowEvent] = useState(false);
 
-    const toggleBtn =() =>{
+    const toggleBtn = () => {
         setShowEvent(!showEvent);
-        console.log(showEvent)
     }
 
+    const [blogList, setBlogList] = useState();
+    const [blogCard, setBlogCard] = useState();
 
-    
+    const [postIds, setPostIds] = useState([]);
+
+    let postLength = blogList?.length;
+
+    const getBlog = async () => {
+        let url = `https://www.tistory.com/apis/post/list?access_token=${token}&output=json&blogName=https://xperon.tistory.com/`;
+        let response = await fetch(url);
+        let data = await response.json();
+        setBlogList(data.tistory.item.posts);
+
+        getBlogCard();
+    };
+
+    const getBlogCard = async () => {
+        const newPosts = [];
+        for (let i = 1; i <= postLength; i++) {
+            newPosts.push(i);
+            console.log("newPost에 i가 몇까지가?::::", i);
+        }
+        setPostIds(newPosts);
+
+        const newCard = [];
+        for (let i = 1; i <= newPosts.length; i++) {
+            console.log("newCard에 i가 몇까지가?::::", i);
+            let url2 = `https://www.tistory.com/apis/post/read?access_token=${token}&output=json&blogName=xperon&postId=${i}`;
+            let response2 = await fetch(url2);
+            let data2 = await response2.json();
+            newCard.push(data2);
+            setBlogCard(newCard.tistory.item);
+        };
+    };
+
+    useEffect(() => {
+        getBlog();
+    }, []);
+
+    console.log(postLength);
+    console.log("블로그 리스트:::", blogList);
+    console.log("블로그 상세내역:::", blogCard);
+    console.log("블로그 몇개 가져오기:::", postIds);
 
     return (
         <div className="section7-container">
@@ -70,7 +113,7 @@ const Section7 = () => {
                                 minLength: 11,
                                 maxLength: 11,
                             })} />
-                        {errors.Phone?.type === "minLength" && <p className="inputText">잘못 입력하였습니다. 전화번호를 확인해주세요.</p>}
+                        {errors.Phone?.type === "minLength" && <p className="inputText">잘못된 번호입니다.</p>}
                         {errors.Phone?.type === "maxLength" && <p className="inputText">11자리가 넘었습니다.</p>}
                         {errors.Phone?.type === "required" && <p className="inputText">전화번호를 입력해주세요.</p>}
                     </div>
@@ -114,15 +157,12 @@ const Section7 = () => {
                     <button className="btnStyle" type="submit"><img src={submitBtn} alt="" /></button>
                 </form>
             </div>
-            <button className="acodionBtn" onClick={toggleBtn}><img src={acodion} alt=""/></button>
-            <div className={showEvent? "eventArea event-active":"eventArea event-not-active"}>
-                <div className="eventImg">
-                    <img src={qvingball} alt=""/>
-                </div>
-                <div className="eventText">
-                    <h2>제목구간</h2>
-                    <p>설명 간단히설명 간단히설명 간단히설명 간단히설명 간단히설명 간단히설명 간단히설명 간단히설명 간단히설명 간단히</p>
-                </div>
+            <button className="acodionBtn" onClick={toggleBtn}><img src={acodion} alt="" /></button>
+
+            <div className={showEvent ? "eventArea event-active" : "eventArea event-not-active"}>
+                {blogCard && blogCard.map((blog) => {
+                    return <BlogCard item={blog} />
+                })}
             </div>
         </div>
     )

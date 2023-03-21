@@ -44,7 +44,9 @@
     height: 100%;
     /* border: 1px solid red; */
 }
-
+.downloadBtn{
+    cursor: pointer;
+}
 
 @media screen and (max-width: 767px) {
 
@@ -66,5 +68,16 @@
     .block:hover{
         transform: scale(1);
         transition: all 1s;
+    }
+}
+
+@media screen and (max-width : 375px) {
+    .block_title{
+        width: 300px;
+        height: 55px;
+        background-size: contain;
+    }
+    .block_title img{
+        width: 200px;
     }
 }
