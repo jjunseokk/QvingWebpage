@@ -21,6 +21,8 @@ import BlogCard from "./BlogCard";
 
 
 const Section7 = () => {
+    // const token = process.env.REACT_APP_API_KEY;
+
     const { register, handleSubmit, formState: { errors }, } = useForm();
 
 
@@ -41,46 +43,49 @@ const Section7 = () => {
     const [blogList, setBlogList] = useState();
     const [blogCard, setBlogCard] = useState();
 
-    const [postIds, setPostIds] = useState([]);
+
 
     let postLength = blogList?.length;
 
     const getBlog = async () => {
-        let url = `https://www.tistory.com/apis/post/list?access_token=${token}&output=json&blogName=https://xperon.tistory.com/`;
-        let response = await fetch(url);
-        let data = await response.json();
-        setBlogList(data.tistory.item.posts);
-
-        getBlogCard();
+        try {
+            const response = await axios.get(
+                `https://www.tistory.com/apis/post/list?access_token=${token}&output=json&blogName=https://xperon.tistory.com/`,
+            );
+            setBlogList(response.data.tistory.item.posts);
+        } catch (error) {
+            console.log(error);
+        }
     };
 
     const getBlogCard = async () => {
-        const newPosts = [];
-        for (let i = 1; i <= postLength; i++) {
-            newPosts.push(i);
-            console.log("newPost에 i가 몇까지가?::::", i);
+        const newCard =[];
+        try {
+            for(let i = 1; i <= 5; i++){
+                const response = await axios.get(
+                    `https://www.tistory.com/apis/post/read?access_token=${token}&output=json&blogName=xperon&postId=${i}`
+                );
+                newCard.push(response.data.tistory.item);
+            }
+                setBlogCard(newCard);
+            
+        } catch (error) {
+            console.log(error);
         }
-        setPostIds(newPosts);
-
-        const newCard = [];
-        for (let i = 1; i <= newPosts.length; i++) {
-            console.log("newCard에 i가 몇까지가?::::", i);
-            let url2 = `https://www.tistory.com/apis/post/read?access_token=${token}&output=json&blogName=xperon&postId=${i}`;
-            let response2 = await fetch(url2);
-            let data2 = await response2.json();
-            newCard.push(data2);
-            setBlogCard(newCard.tistory.item);
-        };
-    };
+    }
 
     useEffect(() => {
         getBlog();
     }, []);
 
-    console.log(postLength);
-    console.log("블로그 리스트:::", blogList);
-    console.log("블로그 상세내역:::", blogCard);
-    console.log("블로그 몇개 가져오기:::", postIds);
+    useEffect(() => {
+        getBlogCard();
+    }, []);
+
+    // console.log(postLength);
+    // console.log("블로그 리스트:::", blogList);
+    // console.log("블로그 상세내역:::", blogCard);
+    // console.log("블로그 몇개 가져오기:::", postIds);
 
     return (
         <div className="section7-container">
@@ -160,7 +165,7 @@ const Section7 = () => {
             <button className="acodionBtn" onClick={toggleBtn}><img src={acodion} alt="" /></button>
 
             <div className={showEvent ? "eventArea event-active" : "eventArea event-not-active"}>
-                {blogCard && blogCard.map((blog) => {
+                {blogCard && blogCard.map((blog, index) => {
                     return <BlogCard item={blog} />
                 })}
             </div>

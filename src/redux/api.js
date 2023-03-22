@@ -10,26 +10,4 @@ const api = axios.create({
     RESPONSE_TYPE : 'code',
 })
 
-export const token =`854f8c29c19dab0b5063ac90d4b6dfe2_a371b6a6bca57ba2464da966396ccd3d`
-
-// Tistory API 호출 함수
-// const getAccessToken = async (code) => {
-//   try {
-//     const response = await axios({
-//       method: 'post',
-//       url: `https://www.tistory.com/apis/post/list?access_token=854f8c29c19dab0b5063ac90d4b6dfe2_a371b6a6bca57ba2464da966396ccd3d&output=json&blogName=https://xperon.tistory.com/`,
-//       data: {
-//         client_id: CLIENT_ID,
-//         client_secret: CLIENT_SECRET,
-//         redirect_uri: REDIRECT_URI,
-//         grant_type: RESPONSE_TYPE,
-//         code: code,
-//       },
-//     });
-//     return response.data.access_token;
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };
-
-// export default getAccessToken;
+export const token =`854f8c29c19dab0b5063ac90d4b6dfe2_a371b6a6bca57ba2464da966396ccd3d`;
