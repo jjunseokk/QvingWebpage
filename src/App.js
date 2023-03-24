@@ -20,9 +20,9 @@ function App() {
   const [showMobile, setShowMobile] = useState(false);
 
 
-  window.addEventListener('scroll', function() {
+  window.addEventListener('scroll', function () {
     let windowY = window.scrollY;
-    
+
     if (windowY > 2000) {
       setShowMobile(true);
     } else {
@@ -50,7 +50,7 @@ function App() {
       <div id='5'>
         <Section7 />
       </div>
-      <div className={showMobile? "mobile_inquiry mobile_is_active":"mobile_inquiry mobile_is_not_active"}>
+      <div className={showMobile ? "mobile_inquiry mobile_is_active" : "mobile_inquiry mobile_is_not_active"}>
         <a href="https://pf.kakao.com/_xnGFTT"><img src={kakao} alt=""></img></a>
         <a href="tel:0220705009"><img src={call} alt=""></img></a>
       </div>

@@ -1,17 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { useForm } from "react-hook-form";
 import '../Style/section7.scss';
 import { token } from '../redux/api'
 import axios from "axios";
 
 import installText from '../Asset/Image/installText.png';
 import installTitle from '../Asset/Image/installTitle.png';
-import name from '../Asset/Image/name.png';
-import phone from '../Asset/Image/phone.png';
-import store from '../Asset/Image/store.png';
-import link from '../Asset/Image/link.png';
-import playScore from '../Asset/Image/play.png';
-import inquiry from '../Asset/Image/Inquiry.png';
 import event from '../Asset/Image/event.png';
 import submitBtn from '../Asset/Image/submitBtn.png'
 import BlogCard from "./BlogCard";
@@ -21,32 +14,9 @@ import BusinessBenefits from '../Asset/button/BusinessBenefits.png'
 
 const Section7 = () => {
 
-    const { register, handleSubmit, formState: { errors }, } = useForm();
 
     const [blogCard, setBlogCard] = useState();
     const [blogList, setBlogList] = useState();
-
-    
-    const onSubmit = (data) => {
-        console.log(data);
-        
-        fetch("http//localhost:3001/text",{
-            method: "post",
-            headers: {
-                "content-type" : "application/json",
-            },
-            body : JSON.stringify(data),
-        })
-        .then((res)=> res.json())
-        .then((json)=> {
-            console.log(json);
-        })
-        alert("완료되었습니다. 감사합니다. 빠른 시일내에 연락드리겠습니다.");
-    };
-    
-    const onError = (error) => {
-        console.log("에러가 뜨는가?:::::", error);
-    };
 
     const [showEvent, setShowEvent] = useState(false);
 
@@ -117,70 +87,7 @@ const Section7 = () => {
                 <img src={event} alt="" />
             </div>
             <div className="install-area">
-                <form onSubmit={handleSubmit(onSubmit, onError)}>
-                    <div>
-                        <label><img src={name} alt="" /></label>
-                        <input type="text"
-                            placeholder="이름을 입력하세요."
-                            {...register("name", {
-                                required: true,
-                                minLength: 2
-                            })} />
-                        {errors.name?.type === "minLength" && <p className="inputText">이름은 최소 2글자 이상이어야 합니다.</p>}
-                        {errors.name?.type === "required" && <p className="inputText">이름은 필수 입력해주세요.</p>}
-                    </div>
-                    <div>
-                        <label><img src={phone} alt="" /></label>
-                        <input type="text"
-                            placeholder="전화번호(- 제외)를 입력하세요."
-                            {...register("Phone", {
-                                required: true,
-                                minLength: 11,
-                                maxLength: 11,
-                            })} />
-                        {errors.Phone?.type === "minLength" && <p className="inputText">잘못된 번호입니다.</p>}
-                        {errors.Phone?.type === "maxLength" && <p className="inputText">11자리가 넘었습니다.</p>}
-                        {errors.Phone?.type === "required" && <p className="inputText">전화번호를 입력해주세요.</p>}
-                    </div>
-                    <div>
-                        <label><img src={store} alt="" /></label>
-                        <input {...register("store", {
-                            required: true,
-                            minLength: 2
-                        })}
-                            placeholder="매장이름과 위치를 입력하세요." />
-                        {errors.store?.type === "minLength" && <p className="inputText">위치를 정확히 입력해주세요.</p>}
-                        {errors.store?.type === "required" && <p className="inputText">매장이름과 위치를 입력해주세요.</p>}
-                    </div>
-                    <div>
-                        <label><img src={link} alt="" /></label>
-                        <input {...register("link", {
-                            required: true,
-                        })}
-                            placeholder="큐빙을 알게된 경로를 입력하세요." />
-                        {errors.link?.type === "required" && <p className="inputText">경로를 입력해주세요.</p>}
-                    </div>
-                    <div>
-                        <label><img src={playScore} alt="" /></label>
-                        <input {...register("playScore", {
-                            required: true
-                        })}
-                            placeholder="타석갯수를 입력하세요." />
-                        {errors.playScore?.type === "required" && <p className="inputText">타석갯수를 입력해주세요.</p>}
-                    </div>
-                    <div>
-                        <label><img className="input-style" src={inquiry} alt="" /></label>
-                        <textarea
-                            cols={60}
-                            rows={15}
-                            {...register("inquiry", {
-                                required: true
-                            })}
-                            placeholder="문의사항을 입력하세요." />
-                        {errors.inquiry?.type === "required" && <p className="inputText">문의사항을 입력해주세요.</p>}
-                    </div>
-                    <button className="btnStyle" type="submit"><img src={submitBtn} alt="" /></button>
-                </form>
+                <button className="btnStyle"><a href="https://forms.gle/yhpLerxzmPTydmMt9"><img src={submitBtn} alt="" /></a></button>
             </div>
             <div className="btn-area">
                 <button className="acodionBtn" onClick={toggleBtn}><img src={BusinessBenefits} alt="" ></img></button>
