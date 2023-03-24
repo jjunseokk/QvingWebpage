@@ -1,5 +1,5 @@
 import React from "react";
-import '../Style/header.css'
+import '../Style/header.scss'
 import { Link } from "react-scroll";
 
 

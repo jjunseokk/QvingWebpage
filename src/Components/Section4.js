@@ -1,12 +1,10 @@
 import React from "react";
-import '../Style/section4.css'
+import '../Style/section4.scss'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Card from "./TapMenu/Card";
 
-
-
+// img
 import qvingkiosk from '../Asset/Image/qvingkiosk.png';
 import qvingrayout_1 from '../Asset/Image/qvingrayout_1.png';
 import qvingrayout_2 from '../Asset/Image/qvingrayout_2.png';

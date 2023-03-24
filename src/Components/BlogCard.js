@@ -1,9 +1,13 @@
+// ------------------티스토리 블로그 카드-----------------
+
 import React,{useEffect, useState} from "react";
+import '../Style/section7.scss'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
-import goBlog from '../Asset/Image/tapMenu_on.png'
+const BlogCard = ({ item }) => { //item : 파라미터를 받아서 쓴다. 
 
-const BlogCard = ({ item }) => {
-    // console.log("item을 받았습니다.:::", item);
+    // html 파일을 react 에서 그대로 출력
     const [thumbnailUrl, setThumbnailUrl] = useState('');
 
     useEffect(()=>{
@@ -15,6 +19,7 @@ const BlogCard = ({ item }) => {
         setThumbnailUrl(thumbnailUrl);
     },[]);
 
+    let postUrl = `${item?.postUrl}`;
 
     return (
         <div className="eventCard">
@@ -24,7 +29,7 @@ const BlogCard = ({ item }) => {
             <div className="eventText">
                 <h2>{item?.title}</h2>
                 <div className="contentTxt" dangerouslySetInnerHTML={{ __html: item?.content }}></div>
-                <button><img src={goBlog} alt=""/></button>
+                <button className="eventBtn"><a href={postUrl} target="_blank" rel="noopener noreferrer">자세히 보러가기 <FontAwesomeIcon icon={faArrowRight} /></a></button>
             </div>
         </div>
 

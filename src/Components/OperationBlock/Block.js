@@ -1,14 +1,15 @@
+// -----------------section6.js (큐빙 간편 운영 방법) 블록--------
+
+
 import React from "react";
 import styled from "styled-components";
-import '../../Style/section6.css'
+import '../../Style/section6.scss'
 
 
 
 const BlockArea = styled.div`
     width: 265px;
     height: 410px;
-    /* border: 1px solid red; */
-    
 `;
 
 const Block = (props) => {

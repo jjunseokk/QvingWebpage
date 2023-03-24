@@ -1,0 +1,116 @@
+.section5-container{
+    width: 100vw;
+    height: 150vh;
+    background:url(../Asset/background/section5.png) no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .wrap{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        >img{
+            &:nth-child(1){
+                margin-top: 100px;
+            }
+            &:nth-child(2){
+                margin-top: 20px;
+                margin-bottom: 70px;
+            }
+        }
+    }
+}
+
+.isnot-active{
+    position: absolute;
+    left: -70%;
+    opacity: 0;
+}
+.is-active{
+    position: absolute;
+    left: 50%;
+    opacity: 1;
+    transition: all 1s;
+    transform: translate(-50%);
+}
+.memo{
+    width: 600px;
+    height: 600px;
+    background: url(../Asset/Image/memo.png) no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+
+@media screen and (max-width: 767px) {
+    .section5-container{
+        width: 100vw;
+        height: auto;
+        padding: 20px 0px;
+    }
+    .isnot-active{
+        position:initial;
+        opacity: 1;
+
+    }
+    .is-active{
+        position:initial;
+        transform: translate(0%);
+
+    }
+    .wrap {
+        >img{
+            &:nth-child(1){
+                width: 300px;
+            }
+            &:nth-child(2){
+                width: 150px;
+            }
+        }
+    }
+    
+    .memo{
+        width: 300px;
+        height: 300px;
+        background: url(../Asset/Image/memo.png) no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            width: 80%;
+            margin-top: 40px;
+        }
+    }
+}
+
+@media screen and (max-width : 375px) {
+    .memo{
+        width: 300px;
+        height: 300px;
+        background: url(../Asset/Image/memo.png) no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+    }
+    .wrap{
+        > img{
+            &:nth-child(1){
+                margin-top: 50px;
+                width: 250px;
+            }
+            &:nth-child(2){
+                margin-bottom: 50px;
+                width: 150px;
+            }
+        }
+    } 
+}

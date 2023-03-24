@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
-import '../Style/section7.css';
+import '../Style/section7.scss';
 import { token } from '../redux/api'
 import axios from "axios";
 
@@ -14,22 +14,36 @@ import playScore from '../Asset/Image/play.png';
 import inquiry from '../Asset/Image/Inquiry.png';
 import event from '../Asset/Image/event.png';
 import submitBtn from '../Asset/Image/submitBtn.png'
-import acodion from '../Asset/Image/acodion.png';
 import BlogCard from "./BlogCard";
-
-
+import businessplan from '../Asset/button/businessplan.png';
+import BusinessBenefits from '../Asset/button/BusinessBenefits.png'
 
 
 const Section7 = () => {
-    // const token = process.env.REACT_APP_API_KEY;
 
     const { register, handleSubmit, formState: { errors }, } = useForm();
 
+    const [blogCard, setBlogCard] = useState();
+    const [blogList, setBlogList] = useState();
 
+    
     const onSubmit = (data) => {
         console.log(data);
-        alert("완료되었습니다. 감사합니다. 빠른 시일내에 연락드리겠습니다.")
+        
+        fetch("http//localhost:3001/text",{
+            method: "post",
+            headers: {
+                "content-type" : "application/json",
+            },
+            body : JSON.stringify(data),
+        })
+        .then((res)=> res.json())
+        .then((json)=> {
+            console.log(json);
+        })
+        alert("완료되었습니다. 감사합니다. 빠른 시일내에 연락드리겠습니다.");
     };
+    
     const onError = (error) => {
         console.log("에러가 뜨는가?:::::", error);
     };
@@ -40,36 +54,43 @@ const Section7 = () => {
         setShowEvent(!showEvent);
     }
 
-    const [blogList, setBlogList] = useState();
-    const [blogCard, setBlogCard] = useState();
+    // ----------사업소개서 다운로드 버튼------------------
+    const onButtonClick = () => {
+        // using Java Script method to get PDF file
+        fetch('Smart Unmanned Platform Cubing_Business Introduction.pdf').then(response => {
+            response.blob().then(blob => {
+                // Creating new object of PDF file
+                const fileURL = window.URL.createObjectURL(blob);
+                // Setting various property values
+                let alink = document.createElement('a');
+                alink.href = fileURL;
+                alink.download = 'Smart Unmanned Platform Cubing_Business Introduction.pdf';
+                alink.click();
+            })
+        })
+    }
 
-
-
-    let postLength = blogList?.length;
-
+    // 티스토리 블로그 글 목록 받기.
     const getBlog = async () => {
-        try {
-            const response = await axios.get(
-                `https://www.tistory.com/apis/post/list?access_token=${token}&output=json&blogName=https://xperon.tistory.com/`,
-            );
-            setBlogList(response.data.tistory.item.posts);
-        } catch (error) {
-            console.log(error);
-        }
+        let url = `https://www.tistory.com/apis/post/list?access_token=${token}&output=json&blogName=https://xperon.tistory.com/`;
+        let response = await fetch(url);
+        let data = await response.json();
+        setBlogList(data.tistory.item.posts);
     };
 
+    // 티스토리 블로그 글 내용 받기.
     const getBlogCard = async () => {
-        const newCard =[];
+        const newCard = [];
         try {
-            for(let i = 1; i <= 5; i++){
+            for (let i = 0; i < blogList.length; i++) {
                 const response = await axios.get(
-                    `https://www.tistory.com/apis/post/read?access_token=${token}&output=json&blogName=xperon&postId=${i}`
+                    `https://www.tistory.com/apis/post/read?access_token=${token}&output=json&blogName=xperon&postId=${blogList[i]?.id}`,
                 );
-                newCard.push(response.data.tistory.item);
+                newCard.push(response.data.tistory.item); //배열로 저장.
             }
-                setBlogCard(newCard);
-            
-        } catch (error) {
+            setBlogCard(newCard);
+        }
+        catch (error) {
             console.log(error);
         }
     }
@@ -80,12 +101,11 @@ const Section7 = () => {
 
     useEffect(() => {
         getBlogCard();
-    }, []);
+    }, [showEvent]); //더보기 버튼 눌릴 시 api 호출.
 
-    // console.log(postLength);
-    // console.log("블로그 리스트:::", blogList);
+
     // console.log("블로그 상세내역:::", blogCard);
-    // console.log("블로그 몇개 가져오기:::", postIds);
+    // console.log("블로그 리스트:::", blogList);
 
     return (
         <div className="section7-container">
@@ -162,13 +182,17 @@ const Section7 = () => {
                     <button className="btnStyle" type="submit"><img src={submitBtn} alt="" /></button>
                 </form>
             </div>
-            <button className="acodionBtn" onClick={toggleBtn}><img src={acodion} alt="" /></button>
+            <div className="btn-area">
+                <button className="acodionBtn" onClick={toggleBtn}><img src={BusinessBenefits} alt="" ></img></button>
+                <button className="acodionBtn" onClick={onButtonClick}><img src={businessplan} alt="" ></img></button>
+            </div>
 
             <div className={showEvent ? "eventArea event-active" : "eventArea event-not-active"}>
-                {blogCard && blogCard.map((blog, index) => {
-                    return <BlogCard item={blog} />
+                {blogCard && blogCard.map((blog, i) => {
+                    return <BlogCard item={blog} key={i} />
                 })}
             </div>
+
         </div>
     )
 }

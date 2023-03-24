@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
-import '../Style/section5.css'
+import '../Style/section5.scss'
 
 import bizTitle from '../Asset/Image/biztitle.png';
 import bizText from '../Asset/Image/biztext.png';
 import memoText from '../Asset/Image/memotext.png';
-const Section5 = () => {
-    // console.clear();
 
+const Section5 = () => {
+    console.clear();
+
+    // 마우스 일정 구간을 지나면 함수 실행
     const [change, setChange] = useState(false);
 
     useEffect(() => {
@@ -17,10 +19,8 @@ const Section5 = () => {
         let container = document.querySelector(".section5-container");
         if (container.offsetTop <= position) {
             setChange(true);
-         
         } else {
             setChange(false);
-
         }
     }
 

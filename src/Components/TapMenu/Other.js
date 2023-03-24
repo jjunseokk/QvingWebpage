@@ -1,9 +1,11 @@
+// ------------------section3.js 기타용품 슬라이드----------------------
+
 import React from "react";
 import Card from "./Card";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import '../../Style/section3.css';
+import '../../Style/section3.scss';
 import '../../Style/arrow.scss';
 
 

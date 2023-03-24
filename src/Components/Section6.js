@@ -1,7 +1,6 @@
 import React from "react";
-import '../Style/section6.css'
+import '../Style/section6.scss'
 import Block from "./OperationBlock/Block";
-import { Link } from "react-scroll";
 
 import blockImg_1 from '../Asset/Image/qvingBlockImage_1.png';
 import blockImg_2 from '../Asset/Image/qvingBlockImage_2.png';
@@ -13,7 +12,7 @@ import blockTitle_3 from '../Asset/Image/qvingBlockText_3.png';
 import blockTitle_4 from '../Asset/Image/qvingBlockText_4.png';
 import qvingOperation from '../Asset/Image/qvingOperation.png';
 import qvingOperationText from '../Asset/Image/qvingOperationText.png';
-import downBtn from '../Asset/Image/downBtn.png'
+
 
 const Section6 = () => {
     return (
@@ -27,8 +26,8 @@ const Section6 = () => {
                 <Block img={blockImg_3} title={blockTitle_3} />
                 <Block img={blockImg_4} title={blockTitle_4} />
             </div>
-            <img style={{marginBottom:'40px'}} src={qvingOperationText} alt=""/>
-            <Link className="downloadBtn" to="https://xperon.onelink.me/NaR5"><img src={downBtn} alt=""/></Link>
+            <img style={{marginBottom:'40px', padding:"0px 10px"}} src={qvingOperationText} alt=""/>
+            
         </div>
     )
 }

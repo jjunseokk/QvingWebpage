@@ -1,5 +1,5 @@
 import React from "react";
-import '../Style/section1.css';
+import '../Style/section1.scss';
 import styled from "styled-components";
 import { Link } from "react-scroll";
 import Header from "./Header";
@@ -19,7 +19,6 @@ const Section = () => {
 
 
     // 퀵메뉴 따라오게
-
         window.addEventListener('scroll', function (e) {
             document.querySelector(".inquiry").style.top = window.scrollY + "px";
             document.querySelector(".inquiry").style.marginTop = "50px";
@@ -56,10 +55,9 @@ const Section = () => {
                 </div>
             </div>
             <div className="inquiry">
-                    <Link to="https://pf.kakao.com/_xnGFTT"><img src={kakao} alt="kakao" /></Link>
-                    <Link to="tel:0220705009"><img src={call} alt="" /></Link>
+                    <a href="https://pf.kakao.com/_xnGFTT"><img src={kakao} alt="kakao" /></a>
+                    <a href="tel:0220705009"><img src={call} alt="" /></a>
             </div>
-
         </>
 
     )
@@ -76,7 +74,6 @@ const Button = styled.button`
     background-color: #886831;
     color: white;
     font-size: 35px;
-    /* line-height: 52px; */
     font-family: 'Black Han Sans', sans-serif;
     cursor: pointer;
     &:hover{

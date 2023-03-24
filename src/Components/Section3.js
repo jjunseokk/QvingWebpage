@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import '../Style/section3.css'
+import '../Style/section3.scss'
 import GolfBall from "./TapMenu/GolfBall";
 import GolfGlove from "./TapMenu/GolfGlove";
 import GolfItem from "./TapMenu/GolfItem";
@@ -19,6 +19,7 @@ import OtherText from '../Asset/Image/OtherText.png';
 
 
 const Section3 = () => {
+
     let [currentTab, clickTab] = useState(0);
 
     const menuArr = [

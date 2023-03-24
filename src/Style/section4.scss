@@ -1,0 +1,99 @@
+.section4-container{
+    width: 100vw;
+    height: 100vh;
+    background:url(../Asset/background/section4.png) no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.qving-title{
+    display: block;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+.qving-area{
+    z-index: 10;
+    position: absolute;
+    top :40%;
+    left: 55%;
+}
+
+.qving{
+    width: 420px;
+    height: 700px;
+    position: relative;
+    margin-top: 20px;
+}
+
+.qving-kiosk{
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+.qving-slider{
+    width: 80%;
+    height: 500px;
+    position: absolute;
+    top: -120px;
+    left: 45px;
+}
+.qving-slider{
+    img{
+        width: 100%;
+        height: 700px;
+    }
+}
+
+
+
+@media screen and (max-width: 767px) {
+    .section4-container{
+        width: 100vw;
+        height: 80vh;
+        background:url(../Asset/background/section4.png) no-repeat 45% center;
+        background-size: 500%;
+    }
+    .qving-title{
+       width: 90vw;
+    }
+    .qving-area{
+        z-index: 10;
+        position: absolute;
+        top :40%;
+        left: 48%;
+    }
+    .qving{
+        width: 200px;
+        height: 330px;
+        img{
+            width: 100%;
+
+        }
+    }
+    .qving-slider{
+        width: 80%;
+        height: 320px;
+        top: -40px;
+        left: 20px;
+        img{
+            width: 100%;
+            height: 300px;
+        }
+    }    
+}
+
+@media screen and (max-width : 375px) {
+    .section4-container{
+        width: 100vw;
+        height: 100vh;
+        background:url(../Asset/background/section4.png) no-repeat 47% center;
+        background-size: 500%;
+    }
+    .qving-area{
+        z-index: 10;
+        position: absolute;
+        top :40%;
+        left: 45%;
+    }
+}
+
