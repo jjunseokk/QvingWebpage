@@ -12,6 +12,13 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
 
+    @media screen and (max-width : 1440px){
+        height: 270px;
+        img{
+            width : 80%;
+        }
+    }
+
     @media screen and (max-width: 767px) { 
         width: 290px;
         height: 110px;

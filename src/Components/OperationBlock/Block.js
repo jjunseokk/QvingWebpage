@@ -10,6 +10,12 @@ import '../../Style/section6.scss'
 const BlockArea = styled.div`
     width: 265px;
     height: 410px;
+
+    @media screen and (max-width : 1440px){
+        width : 200px;
+        height : 350px;
+        padding : 5px;
+    }
 `;
 
 const Block = (props) => {

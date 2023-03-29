@@ -38,17 +38,17 @@ const Section2 = () => {
         arrows: false,
         responsive: [
             {
-                breakpoint: 2561,
+                breakpoint: 3300,
                 settings: {
                     slidesToShow: 9,
-                    slidesToScroll: 5,
+                    slidesToScroll: 3,
                 }
             },
 
             {
-                breakpoint: 1024,
+                breakpoint: 1880,
                 settings: {
-                    slidesToShow: 7,
+                    slidesToShow: 5,
                     slidesToScroll: 3,
                 },
             },
